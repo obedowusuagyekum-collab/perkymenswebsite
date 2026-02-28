@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PerkyMens Kitchen | Best Pork & Rice in Kumasi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+body{background: linear-gradient(135deg, #fff4e6, #ffe6e6); color:#111;}
+header{background:#000; padding:20px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000;}
+header h1{color:gold;}
+nav a{color:white; text-decoration:none; margin-left:20px; font-weight:500;}
+nav a:hover{color:gold;}
+
+/* HERO SECTION */
+.hero{
+    position:relative;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('images/pork-background.png') center/cover no-repeat;
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:0 20px;
+    overflow:hidden;
+}
+.hero::before, .hero::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-repeat:no-repeat;
+    background-size:150px;
+    opacity:0.15;
+}
+.hero::before{background-image: url('https://img.icons8.com/emoji/96/spicy-pepper.png'); top:20%; left:5%;}
+.hero::after{background-image: url('https://img.icons8.com/emoji/96/kitchen-knife.png'); bottom:15%; right:10%;}
+.hero h2{font-size:50px; background:rgba(0,0,0,0.6); padding:15px 20px; border-radius:10px; z-index:1;}
+.hero p{margin-top:15px; font-size:20px; background:rgba(0,0,0,0.5); padding:10px 15px; border-radius:8px; z-index:1;}
+.btn{background:gold; color:black; padding:12px 25px; margin-top:20px; text-decoration:none; font-weight:bold; border-radius:5px; transition:0.3s; z-index:1;}
+.btn:hover{background:#ff4500; color:white;}
+.hero-ad{position:absolute; bottom:20px; left:50%; transform:translateX(-50%); background:#ff4500; color:white; padding:10px 20px; border-radius:20px; font-weight:bold; font-size:18px; z-index:2; box-shadow:0 5px 15px rgba(0,0,0,0.3); animation: bounce 2s infinite;}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(-10px);}}
+
+/* SECTIONS */
+section{padding:70px 10%;}
+.section-title{text-align:center; font-size:35px; margin-bottom:40px; color:gold;}
+
+/* MENU */
+.menu-container{display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:30px;}
+.menu-item{background:linear-gradient(135deg, #ff7f50, #ff6347); padding:20px; border-radius:10px; text-align:center; color:white; box-shadow:0 5px 15px rgba(0,0,0,0.3); transition:0.3s;}
+.menu-item:hover{transform:scale(1.05);}
+.menu-item img{width:100%; border-radius:10px; margin-bottom:10px;}
+.price{color:yellow; font-weight:bold; margin-top:10px;}
+
+/* GALLERY */
+.gallery{display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; margin-top:20px;}
+.gallery img{width:100%; border-radius:10px; transition:0.3s;}
+.gallery img:hover{transform:scale(1.05);}
+
+/* TESTIMONIAL */
+.testimonial{
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:20px;
+    color:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+.testimonial p{font-size:16px; margin-bottom:10px;}
+.testimonial strong{display:block; font-size:14px; opacity:0.9;}
+
+/* FOOTER */
+footer{background:black; text-align:center; padding:20px; margin-top:40px; color:white;}
+iframe{width:100%; height:300px; border-radius:10px;}
+@media(max-width:768px){.hero h2{font-size:30px;}.hero-ad{font-size:16px; padding:8px 15px;}}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>PerkyMens Kitchen</h1>
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Best Pork & Rice in Kumasi</h2>
+    <p>Opposite Acheamfour Hotel, Off Apatrapa Road</p>
+    <a class="btn" href="https://wa.me/233YOURNUMBER">Order Now on WhatsApp</a>
+    <div class="hero-ad">🔥 Today’s Special: Pork + Yam Chips Only 35gh 🔥</div>
+</section>
+
+<section id="menu">
+    <h2 class="section-title">Our Menu</h2>
+    <div class="menu-container">
+        <!-- Pork with Yam Chips -->
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1604908177522-402a8e8b1a07" alt="Pork with Yam Chips">
+            <h3>Pork with Yam Chips 🌶️🔪</h3>
+            <p>Delicious spicy pork with crispy yam chips.</p>
+            <p class="price">30gh</p>
+        </div>
+
+        <!-- Pork Fried Rice -->
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1589308078056-f3e8b5a2c43f" alt="Pork Fried Rice">
+            <h3>Pork Fried Rice 🌶️🔪</h3>
+            <p>Well seasoned fried rice served hot.</p>
+            <p class="price">35gh</p>
+        </div>
+
+        <!-- Jollof Rice with Pork -->
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1604908554163-df5b2e2c58e1" alt="Jollof Rice with Pork">
+            <h3>Jollof Rice with Pork 🌶️🔪</h3>
+            <p>Rich Ghana jollof served with grilled pork.</p>
+            <p class="price">40gh</p>
+        </div>
+
+        <!-- Waakye with Egg & Meat -->
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1620087433108-0a9a77d7d1c5" alt="Waakye with Egg & Meat">
+            <h3>Waakye with Egg & Meat 🍛</h3>
+            <p>Traditional Ghanaian waakye served with boiled egg and savory meat.</p>
+            <p class="price">25gh</p>
+        </div>
+
+        <!-- Zobo Vibes Drink -->
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1600691352303-f95f6761448e" alt="Zobo Vibes Drink">
+            <h3>Zobo Vibes 🥤</h3>
+            <p>Refreshing hibiscus leaf drink, perfect with any meal.</p>
+            <p class="price">5gh</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1617196030890-5f1ee1c7f6e5" alt="Grilled Pork">
+        <img src="https://images.unsplash.com/photo-1604908177438-5a5a2f7b2d4b" alt="Yam Chips">
+        <img src="https://images.unsplash.com/photo-1598514982498-1a626b5d78f7" alt="Fried Rice">
+        <img src="https://images.unsplash.com/photo-1604908554210-3bb6c8d9c5c9" alt="Jollof Rice with Pork">
+        <img src="https://images.unsplash.com/photo-1620087433108-0a9a77d7d1c5" alt="Waakye with Egg & Meat">
+        <img src="https://images.unsplash.com/photo-1600691352303-f95f6761448e" alt="Zobo Vibes Drink">
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Us</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+        PerkyMens Kitchen is one of the fast-growing local food spots in Kumasi,
+        known for tasty pork meals, fast service, and affordable prices.
+        We offer dine-in, pickup, and delivery services.
+    </p>
+</section>
+
+<section>
+    <h2 class="section-title">Customer Reviews</h2>
+
+    <div class="testimonial" style="background:linear-gradient(135deg, #ff7f50, #ff6347);">
+        <p>⭐ ⭐ ⭐ ⭐ ⭐ "The best pork in Apatrapa! Very tasty and affordable. The yam chips are always crispy and hot. I always order for my weekend gatherings!"</p>
+        <strong>- LuhKel, KNUST Student | 12 Feb 2026</strong>
+    </div>
+
+    <div class="testimonial" style="background:linear-gradient(135deg, #ff7f50, #ff4500);">
+        <p>⭐ ⭐ ⭐ ⭐ ⭐ "Fast delivery and clean environment. Highly recommended! The Jollof rice with pork is my favorite, perfectly seasoned."</p>
+        <strong>- Tiwaa, Office Worker | 20 Feb 2026</strong>
+    </div>
+
+    <div class="testimonial" style="background:linear-gradient(135deg, #ff8c00, #ff6347);">
+        <p>⭐ ⭐ ⭐ ⭐ ⭐ "Amazing taste and value! I tried the fried rice with pork yesterday and it was mouth-watering. Will definitely order again!"</p>
+        <strong>- Joseph, Taxi Driver | 25 Feb 2026</strong>
+    </div>
+
+</section>
+
+<section id="location">
+    <h2 class="section-title">Find Us</h2>
+    <p style="text-align:center;">Opposite Acheamfour Hotel, Off Apatrapa Road, Kumasi</p>
+    <iframe src="https://maps.google.com/maps?q=Kumasi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<footer id="contact">
+    <p>Open Daily: 3PM - 10PM</p>
+    <p>Call / WhatsApp: +233246113595/0550470297</p>
+    <p>© 2026 PerkyMens Kitchen | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
